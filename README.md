@@ -92,7 +92,16 @@ RSpec has a similar mechanism, but instead you describe a step with a `Describe`
 
 ```
 > bundle install
+```
+
+- To execute all tests:
+```
 > rspec
+```
+
+- To execute an specific tag:
+```
+> spec spec --tag <tag>
 ```
 
 ## Bugs
