@@ -1,0 +1,10 @@
+[caps]
+  platformName = "android"
+  platformVersion = "9.0"
+  deviceName = "android emulator"
+  automationName = 'Appium'
+  app = './apk/qabify2019.apk'
+  avd = 'Pixel_3_API_28'
+
+[appium_lib]
+  wait = 30
