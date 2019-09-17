@@ -99,7 +99,7 @@ describe 'Android actions', :android do
     end
   end
 
-  describe 'Background app in pages', :background do
+  describe 'Expose app in pages', :expose do
     it 'expose in the login page' do
       expect(@app.login.page_title).to eql 'QAbify'
 
