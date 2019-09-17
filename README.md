@@ -2,7 +2,7 @@
 
 ## Test Plan
 
-For testing an App like this, in an agile team, I recommend a combination of automated user interface tests and exploratory testing.
+For testing an App like this, in an agile team, I recommend a combination of *automated user interface tests* and *exploratory testing*.
 
 ### Exploratory testing
 During the exploratory testing process, we learn the product, design test cases, execute test cases and interprete the test results at the same time. It is a method that requires the tester to think critically through the entire process.
@@ -73,7 +73,6 @@ In this App, I've automated the following scenarios:
     - in journey page
     - in past journeys page
 
-For the exploratory testing 
 
 ## Decisions taken
 
@@ -86,6 +85,15 @@ The main difference between RSpec and Cucumber are the business readability fact
 
 RSpec has a similar mechanism, but instead you describe a step with a `Describe` and `It` block that contains the business specification, and then immediately have the code that executes that statement. This approach is a little easier for developers to work with but a little harder for non-technical folks and that's the main reason I decided to use it. I believe in Agile teams, all members should work together and writing the acceptance tests using RSpec facilitate the collaboration between QAs and developers.
 
+## How to execute the automated tests
+> Pre-requisite:
+> - Appium server running
+> - Android emulator running
+
+```
+> bundle install
+> rspec
+```
 
 ## Bugs
 ### Bug template
@@ -146,9 +154,11 @@ A template should include:
 
 
 ## Q&A
+
 1. In a journey, is it possible that the origin is the same than the destination? It looks weird to be and it shouldn't be possible.
 2. What is the expected behaviour after restart (close and open) the app? Should remember the data of the page? Currently, user is log out and login page is displayed
 
 ## Future Improvements
+
 - Execution in parallel to speed up the tests execution
-- Ececution is more than one device for testing how the App performace with diferent resolutions
+- Ececution in more than one android device for testing how the App performace with diferent resolutions. Services like [Saucelabs](https://saucelabs.com/platform/automation-tools/appium) offer this solution.
