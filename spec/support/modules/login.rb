@@ -2,14 +2,16 @@
 
 class BaseLoginPage
   def login_with(user:, password:)
-    # LoginPage.new
-    user_field.send_keys(user)
-    password_field.send_keys(password)
+    enter_login_info(user: user, password: password)
     login_button.click
   end
 
+  def enter_login_info(user:, password:)
+    user_field.send_keys(user)
+    password_field.send_keys(password)
+  end
+
   def page_title
-    # LoginPage.new
     action_bar_field.find_elements(class: 'android.widget.TextView').first.text
   end
 

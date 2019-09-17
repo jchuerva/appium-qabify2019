@@ -11,6 +11,10 @@ describe 'Journey page', :journey do
     @valid_code = @app.code.code
     @app.code.next_button.click
 
+    # check page title
+    title = @app.journey.page_title
+    expect(title).to eql('Choose your journey settings')
+
     # Journey page select origen and destination
     origin = 'Calle Pradillo, 42'
     destination = 'Aeropuerto Madrid Barajas, T4'
