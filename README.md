@@ -119,33 +119,30 @@ A template should include:
 ### Bugs reported
 
 1. Estimate a second car before request it
-  cases:
-    - change the destination
-    - change the car type
 
-  - Expected: Expect the request car button is disable after change any journey parameter. A new extimation is necesary before request it
-  - Current: It's possible request a new car without extimate it
+    - Expected: Expect the request car button is disable after change any journey parameter. A new extimation is necesary before request it
+    - Current: It's possible request a new car without extimate it
 
-  - Steps to reproduce: see `spec/feature/journey_spec.rb`, scenarios: `'estimate a second car before request it: change destination'` and `'estimate a second car before request it: change type'`
+    - Steps to reproduce: see `spec/feature/journey_spec.rb`, scenarios: `'estimate a second car before request it: change destination'` and `'estimate a second car before request it: change type'`
 
 2. In the journey page, it is possible to estimate a car without indicating the type of car. Also, it's possible selecting both types. I don't think las opetion is a bug, but it needs clarification
 
-  - Expected: Estimate journey needs to select at least one car type
-  - Current: It's possible estimate a hourney without selecting any car type
+    - Expected: Estimate journey needs to select at least one car type
+    - Current: It's possible estimate a hourney without selecting any car type
 
-  - Steps to reproduce: see `spec/feature/origen_and_destination_spec copy.rb`, scenario: `'estimate a second car before request it: change destination'`
+    - Steps to reproduce: see `spec/feature/origen_and_destination_spec copy.rb`, scenario: `'estimate a second car before request it: change destination'`
 
 3. First time the user access to the journey page, the estimated price is `null €`
 
-  - Expected: When the price has not been estimated, the price should be `0 €`
-  - Current: Currently, the estimated price is `null €`
+    - Expected: When the price has not been estimated, the price should be `0 €`
+    - Current: Currently, the estimated price is `null €`
 
-  - Steps to reproduce:
-  ```
-  1. Login with valid credentials
-  2. Note the code
-  3. In Journey details page, check the estimated price
-  ```
+    - Steps to reproduce:
+    ```
+    1. Login with valid credentials
+    2. Note the code
+    3. In Journey details page, check the estimated price
+    ```
 
 
 ## Q&A
