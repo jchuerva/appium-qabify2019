@@ -55,4 +55,15 @@ describe 'Login page', :login do
     expect(@app.login.alert_title).to eql('Bad Login')
     expect(@app.login.alert_message).to eql('User name or Password is not correct')
   end
+
+  it 'entering empty credentials' do
+    # check LoginPage title
+    expect(@app.login.page_title).to eql 'QAbify'
+
+    # enter valid values
+    @app.login.login_with(user: '', password: '')
+
+    expect(@app.login.alert_title).to eql('Bad Login')
+    expect(@app.login.alert_message).to eql('User name or Password is not correct')
+  end
 end

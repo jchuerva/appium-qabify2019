@@ -14,7 +14,7 @@ describe 'Navigation between pages', :navigation do
     expect(message).to eql 'Remember this code for requesting a Taxi'
   end
 
-  it 'from code page to login page' do
+  it 'from code page to login page and new code is generated' do
     # back to Login page
     back
     # ensure login page is displayed

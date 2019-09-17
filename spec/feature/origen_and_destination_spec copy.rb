@@ -7,8 +7,6 @@ describe 'Origen and destination dropdown fields', :fields do
   before(:each) do
     # login to app
     @app.login.login_with(user: Settings.valid_user, password: Settings.valid_password)
-    # get code
-    # code = @app.code.code
     @app.code.next_button.click
   end
 
